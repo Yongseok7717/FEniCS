@@ -1,8 +1,8 @@
 Hello, I am a FEniCS user interested in *coninuous/discontinuous Galerkin finite element methods*.  
-Especially, during my PhD research, I have contributed to code implementations for solving **viscoelastic problems**. 
-My works forcused on numerical solutions to **dynamic viscoelastic problems**.
+Especially, during my PhD research, I have contributed to code implementations for solving **viscoelastic problems**.  
+My works forcused on numerical solutions to **dynamic viscoelastic problems**. 
 Code implementations deal with simple wave equations, elastic problems, vicoelastic problems modelled by *generalised Maxwell solid* or *fractional order model*.  
-Numerical schemes are based on *spatial finite element methods(CG/DG)* and *Crank-Nicolson method for time discretisation*.
+Numerical schemes are based on *spatial finite element methods*(CG/DG) and *Crank-Nicolson method* for time discretisation.
 
 
 All codes are constructed in Python 2.7.12 and FEniCS(dolfin) 2016.2.0.
