@@ -1,5 +1,9 @@
 # Mathematical model of viscoelasticity
-
+window.MathJax = {
+  tex: {
+    tags: 'ams'
+  }
+};
 
 Dynamic vicoelastic problem of generalised Maxwell solid is represented as a second kind of Volterra integral equation with expontially decaying kernel. Our aim is to solve the hyperbolic PDE with memory terms by spatially continuous Galerkin finite element method (CGFEM) and Crank-Nicolso finite difference scheme for time discretisation.
 
