@@ -63,7 +63,16 @@ with $u(0)=u_0,$ $\dot u(0)=w_0$ and $\zeta_{q}(0)=0, \ \forall {q}\in\\{1,\ldot
 
 Let us discretise time space. Define $\Delta t=T/N$ for $N\in\mathbb{N}$ and $t_n=n\Delta t$ for $n=0,\ldots,N$. We approximate the solution by
 $$u(t_n,x)\approx Z_h^n(x)\in V^h,\qquad \dot u(t_n,x)\approx W_h^n(x)\in V^h\text{ for $n=0,\ldots,N$},$$based on Crank-Nicolson method with
-$$\frac{W_h^{n+1}(x)+W_h^n(x)}{2}=\frac{Z_h^{n+1}(x)-Z_h^n(x)}{\Delta t}\text{ for $n=0,\ldots,N-1$}.$$ In this manner, we can also consider discrete solutions of internal variables such as $\Phi_{hq}$ and $\\mathcal{S}_ {hq}$ for each $q$.
+$$\frac{W_h^{n+1}(x)+W_h^n(x)}{2}=\frac{Z_h^{n+1}(x)-Z_h^n(x)}{\Delta t}\text{ for $n=0,\ldots,N-1$}.$$ In this manner, we can also consider discrete solutions of internal variables such as $\Psi_{hq}$ and $\\mathcal{S}_ {hq}$ for each $q$.
 
 
 In the end, we can formulate fully discrete schemes;
+\\newcommand{\Lnorm}[2]{\left(#1, #2\right)}
+### Displacement form
+\\begin{gather}
+\Lnorm{\rho\frac{W^{n+1}_h-W^{n}_h}{\Delta t}}{v}+a\left(\frac{Z_h^{n+1}+Z_h^{n}}{2},v\right)-\sum\limits_{q=1}^{N_\varphi}a\left(\frac{{\Psi}_{hq}^{n+1}+{\Psi}_{hq}^{n}}{2},v\right)=\frac{F_d(t_{n+1};v)+F_d(t_{n};v)}{2},\label{p1f1} \\\tau_{q}a\left(\frac{{\Psi}_{hq}^{n+1}-{\Psi}_{hq}^{n}}{\Delta t},v\right)+a\left(\frac{{\Psi}_{hq}^{n+1}+{\Psi}_{hq}^{n}}{2},v\right)=\varphi_qa\left(\frac{Z_h^{n+1}+Z_h^{n}}{2},v\right) \textrm{ for each }{q},\label{p1f2}\\
+a(Z_h^0,{v})= a({u_0},{v}) ,\label{p1f3}\\
+\Lnorm{W^0_h}{v}=\Lnorm{w_0}{v},\label{p1f4}\\
+{\Psi}_{hq}^0=0\qquad\textrm{for each } q,\label{p1f5}
+\\end{gather}
+each for all $v\in V^h$.
