@@ -32,10 +32,10 @@ Define a finite element space $V^h\subset V= \\{ H^1(\Omega)|v=0\  \text{for }x\
 ({\rho\ddot u(t)},{v})_ {L_2(\Omega)}+a(u(t),v)-\sum_{q=1}^{N_\varphi}a(\psi_{q}(t),v)
 &=F_d(t;v)\qquad
 &&\forall v\in V,
-\\
+\\\\
 \tau_{q}a(\dot\psi_{q}(t),v)+a(\psi_{q}(t),v)
 &=\varphi_{q}a(u(t),v) \qquad
 &&\forall v\in V,\ q=1,\ldots,N_\varphi 
 \\end{alignat}where $
-a(w,v)=({D\nabla w}, {\nabla v})_ {L_2(\Omega)}$ and $F_d(t;v)=\Lnorm{f(t)}{v}+(g_N(t),v)_ \\{L_2(\Gamma_N)\\}$
+a(w,v)=({D\nabla w}, {\nabla v})_ {L_2(\Omega)}$ and $F_d(t;v)=({f(t)},{v})_ {L_2(\Omega)}+(g_N(t),v)_ {L_2(\Gamma_N)}$
 with $u(0)=u_0,$ $\dot u(0)=w_0$ and $\psi_{q}(0)=0, \ \forall {q}\in\\{1,\ldots,N_\varphi\\}$.
