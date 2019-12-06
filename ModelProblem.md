@@ -22,4 +22,19 @@ u(t,x)&=0,&x\in \Gamma_D,\ \forall t\text{ (Dirichlet boundary)},\\\\
 D\nabla \left(u(t)-\sum_{{q}=1}^{N_\varphi}\psi_q(t)\right)\cdot \boldsymbol{n}&=g_N,&x\in \Gamma_N,\ \forall t\text{ (Neumann boundary)},
 \\end{align}where $\boldsymbol{n}$ is an outward normal vector.
 
-Define a finite element space $V^h\subset V= \\{ H^1(\Omega)|v=0\  \text{for }x\in\Gamma_D \\} $ of Lagrange finite element.
+In addition, use of integration by parts leads us to obtain internal variables of velocity form as following. 
+$\psi_{q}(t)=\varphi_{q} u(t)-\varphi_{q}e^{-t/\tau_{q}}u_0-\zeta_{q}(t)$ where
+$$ \zeta_{q}(t)=\int^t_0\varphi_{q}e^{-(t-s)/\tau_{q}} \dot u(s)\ ds.$$
+
+Define a finite element space $V^h\subset V= \\{ H^1(\Omega)|v=0\  \text{for }x\in\Gamma_D \\} $ of Lagrange finite element. Then we can derive variational problem with respect to internal variables.
+### Displacement form
+\\begin{alignat}{2}
+\Lnorm{\rho\ddot u(t)}{v}+a(u(t),v)-\sum_{q=1}^{N_\varphi}a(\psi_{q}(t),v)
+&=F_d(t;v)\qquad
+&&\forall v\in V,\label{weak:p1e1}
+\\
+\tau_{q}a(\dot\psi_{q}(t),v)+a(\psi_{q}(t),v)
+&=\varphi_{q}a(u(t),v) \qquad
+&&\forall v\in V,\ q=1,\ldots,N_\varphi \label{weak:p1e2}
+\\end{alignat}
+with $u(0)=u_0,$ $\dot u(0)=w_0$ and $\psi_{q}(0)=0, \ \forall {q}\in\\{1,\ldots,N_\varphi\\}$.
