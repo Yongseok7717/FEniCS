@@ -4,8 +4,8 @@
 Dynamic vicoelastic problem of generalised Maxwell solid is represented as a second kind of Volterra integral equation with expontially decaying kernel. Our aim is to solve the hyperbolic PDE with memory terms by spatially continuous Galerkin finite element method (CGFEM) and Crank-Nicolso finite difference scheme for time discretisation.
 
 
-**We breifly introduce the model problem and give a numerical scheme**
-*Stability and error analysis as well as more details are seen in my research parper and PhD thesis (the link will be appear here soon).*
+**We breifly introduce the model problem and give a numerical scheme.**
+*Stability and error analysis as well as more details are seen in my research parper and PhD thesis (the link will appear here soon).*
 
 
 Let $\Omega\in\mathbb{R}^d$ be our open bounded for $d=2,3$. The model problem is given by
