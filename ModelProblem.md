@@ -50,7 +50,7 @@ In a similar way, we can also obtain a weak formulation of velocity form.
 \tau_{q}a(\dot\zeta_{q}(t),v)+a(\zeta_{q}(t),v)
 =\tau_q\varphi_{q}a(\dot u(t),v) \qquad
 &&\forall v\in V,\ q=1,\ldots,N_\varphi 
-\\end{alignat}where $
+\\end{alignat}where 
 $F_v(t;v)= F_d(t;v)
 -\sum_{{q}=1}^{N_\varphi}\varphi_qe^{-t/\tau_{q}}a(u_0,v)$
 with $u(0)=u_0,$ $\dot u(0)=w_0$ and $\zeta_{q}(0)=0, \ \forall {q}\in\\{1,\ldots,N_\varphi\\}$.
