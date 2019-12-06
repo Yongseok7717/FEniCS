@@ -4,6 +4,10 @@
 Dynamic vicoelastic problem of generalised Maxwell solid is represented as a second kind of Volterra integral equation with expontially decaying kernel. Our aim is to solve the hyperbolic PDE with memory terms by spatially continuous Galerkin finite element method (CGFEM) and Crank-Nicolso finite difference scheme for time discretisation.
 
 
+**We breifly introduce the model problem and give a numerical scheme**
+*Stability and error analysis as well as more details are seen in my research parper and PhD thesis (the link will be appear here soon).*
+
+
 Let $\Omega\in\mathbb{R}^d$ be our open bounded for $d=2,3$. The model problem is given by
 $$ \rho\ddot{u}(t)-\nabla\cdot D\nabla \left(u(t)-\sum_{{q}=1}^{N_\varphi}\psi_q(t)\right)={f}(t) $$ 
 where $D>0$, $\rho$ is a density, $u$ is a displacement, $f$ is an external force and $\\{\psi_q \\} _ {q=1}^{N_\varphi}$ is a set of internal variables of displacement form defined by
