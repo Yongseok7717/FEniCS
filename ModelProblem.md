@@ -1,9 +1,13 @@
 # Mathematical model of viscoelasticity
 
 
-Dynamic vicoelastic problem of generalised Maxwell solid is represented as a second kind of Volterra integral equation with expontially decaying kernel. Let $\Omega\in\mathbb{R}^d$ be our open bounded for $d=2,3$. We have
-$$ \rho\boldsymbol{u}-\nabla\cdot\boldsymbol{\sigma}=\boldsymbol{f} $$ 
-where $\rho$ is a density, $\boldsymbol{u}$ is a displacement vector, $\boldsymbol{\sigma}$ is a stress tensor and $\boldsymbol{f}$ is an external force. The stress tensor is defined by
-$$\boldsymbol{\sigma}=\boldsymbol{D}\boldsymbol{\varepsilon}$$
-where $\boldsymbol{D}$ is a symmetric positive definite fourth order tensor and $\boldsymbol{\varepsilon}$ is Cauchy infinitesimal strain tensor such that
-$$\varepsilon_{ij}(\boldsymbol u)=\frac{1}{2}(\frac{\partial u_i}{\partial x_j}+\frac{\partial u_j}{\partial x_i})\ \text{for }i,j=1,\ldots,d. $$
+Dynamic vicoelastic problem of generalised Maxwell solid is represented as a second kind of Volterra integral equation with expontially decaying kernel. Our aim is to solve the hyperbolic PDE with memory terms by spatially continuous Galerkin finite element method (CGFEM) and Crank-Nicolso finite difference scheme for time discretisation.
+
+
+Let $\Omega\in\mathbb{R}^d$ be our open bounded for $d=2,3$. The model problem is given by
+$$ \rho\ddot{u}(t)-\nabla\cdot D\nabla \left(u(t)-\sum_{{q}=1}^{N_\varphi}\psi_q(t)\right)={f}(t) $$ 
+where $D>0$, $\rho$ is a density, ${u}$ is a displacement, $\boldsymbol{f}$ is an external force and $\{\psi_q\}_{q=1}^{N_\varphi}$ is a set of internal variables of displacement form defined by
+\begin{eqnarray}
+\psi_{q}(t):=\frac{\varphi_{q}}{\tau_{q}}\int^t_0e^{-(t-s)/\tau_{q}}u(s)\ ds,
+\end{eqnarray}
+for
