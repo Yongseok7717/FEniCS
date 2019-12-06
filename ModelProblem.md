@@ -13,4 +13,4 @@ for sets of positive constants $(\varphi_q)_ {q=0}^{N_\varphi}$ and $(\tau_q)_ {
 
 For the stability, we impose pure Dirichlet boundary or mixed boundary with a positive measure of Dirichlet boundary $\Gamma_D$.
 Let us assume a homogeneous Dirichlet boundary condition.
-Define a finite element space $V^h\subset V=\{H^1(\Omega)|v=0\  \text{for }x\in\Gamma_D\}$ of Lagrange finite element.
+Define a finite element space $V^h\subset V=\ {H^1(\Omega)|v=0\  \text{for }x\in\Gamma_D\ }$ of Lagrange finite element.
