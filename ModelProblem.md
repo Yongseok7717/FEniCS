@@ -59,8 +59,8 @@ with $u(0)=u_0,$ $\dot u(0)=w_0$ and $\zeta_{q}(0)=0, \ \forall {q}\in\\{1,\ldot
 **\eqref{eq:disp:ode} and \eqref{eq:velo:ode} are governed by ODEs from differentiating internal variables.**
 
 
-##Fully discrete formulation
+## Fully discrete formulation
 
 Let us discretise time space. Define $\Delta t=T/N$ for $N\in\mathbb{N}$ and $t_n=n\Delta t$ for $n=0,\ldots,N$. We approximate the solution by
-$$u(t_n,x)\approx Z_h^n(x)\in V^h,\qquad \dot u(t_n,x)\approx W_h^n(x)\in V^h$$based on Crank-Nicolson method with
-$$\frac{W_h^{n+1}(x)+W_h^n(x)}{2}=\frac{Z_h^{n+1}(x)-Z_h^n(x)}{\Delta t}.$$
+$$u(t_n,x)\approx Z_h^n(x)\in V^h,\qquad \dot u(t_n,x)\approx W_h^n(x)\in V^h\text{ for $n=0,\ldots,N$}$$based on Crank-Nicolson method with
+$$\frac{W_h^{n+1}(x)+W_h^n(x)}{2}=\frac{Z_h^{n+1}(x)-Z_h^n(x)}{\Delta t}\text{ for $n=0,\ldots,N-1$}.$$
