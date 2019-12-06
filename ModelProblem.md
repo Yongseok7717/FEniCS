@@ -6,8 +6,8 @@ Dynamic vicoelastic problem of generalised Maxwell solid is represented as a sec
 
 Let $\Omega\in\mathbb{R}^d$ be our open bounded for $d=2,3$. The model problem is given by
 $$ \rho\ddot{u}(t)-\nabla\cdot D\nabla \left(u(t)-\sum_{{q}=1}^{N_\varphi}\psi_q(t)\right)={f}(t) $$ 
-where $D>0$, $\rho$ is a density, ${u}$ is a displacement, $\boldsymbol{f}$ is an external force and $\{\psi_q\}_{q=1}^{N_\varphi}$ is a set of internal variables of displacement form defined by
-\begin{eqnarray}
+where $D>0$, $\rho$ is a density, ${u}$ is a displacement, ${f}$ is an external force and $\{\psi_q\}_{q=1}^{N_\varphi}$ is a set of internal variables of displacement form defined by
+\begin{equation}
 \psi_{q}(t):=\frac{\varphi_{q}}{\tau_{q}}\int^t_0e^{-(t-s)/\tau_{q}}u(s)\ ds,
-\end{eqnarray}
+\end{equation}
 for
