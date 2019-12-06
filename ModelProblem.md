@@ -15,7 +15,7 @@ For the stability, we impose pure Dirichlet boundary or mixed boundary with a po
 Let us assume a homogeneous Dirichlet boundary condition. Then we have the following boundary condition such that
 \\begin{align}
 u(t,x)=0,&x\in \Gamma_D,\ \forall t\text{ (Dirichlet boundary)}\\
-D\nabla \left(u(t)-\sum_{{q}=1}^{N_\varphi}\psi_q(t)\right)\cdot \ushort{n}=g_N,&x\in \Gamma_N,\ \ushort{n} is a outward normal vector,\ \forall t\text{ (Neumann boundary)}
+D\nabla \left(u(t)-\sum_{{q}=1}^{N_\varphi}\psi_q(t)\right)\cdot \boldsymbol{n}=g_N,&x\in \Gamma_N,\ \boldsymbol{n} is a outward normal vector,\ \forall t\text{ (Neumann boundary)}
 \\end{align}
 
 Define a finite element space $V^h\subset V= \\{ H^1(\Omega)|v=0\  \text{for }x\in\Gamma_D \\} $ of Lagrange finite element.
