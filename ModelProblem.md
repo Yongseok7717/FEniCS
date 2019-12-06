@@ -8,7 +8,7 @@ Dynamic vicoelastic problem of generalised Maxwell solid is represented as a sec
 *Stability and error analysis as well as more details are seen in my research parper and PhD thesis (the link will appear here soon).*
 
 
-Let $\Omega\in\mathbb{R}^d$ be our open bounded for $d=2,3$. The model problem is given by
+Let $\Omega\in\mathbb{R}^d$ be our open bounded for $d=2,3$ and $[0,T]$ be a time domain for $T>0$. The model problem is given by
 $$ \rho\ddot{u}(t)-\nabla\cdot D\nabla \left(u(t)-\sum_{{q}=1}^{N_\varphi}\psi_q(t)\right)={f}(t) $$ 
 where $D>0$, $\rho$ is a density, $u$ is a displacement, $f$ is an external force and $\\{\psi_q \\} _ {q=1}^{N_\varphi}$ is a set of internal variables of displacement form defined by
 $$\psi_{q}(t):=\frac{\varphi_{q}}{\tau_{q}}\int^t_0e^{-(t-s)/\tau_{q}}u(s)\ ds,\qquad\text{for } q=1,\ldots,N_\varphi,$$
@@ -57,3 +57,10 @@ with $u(0)=u_0,$ $\dot u(0)=w_0$ and $\zeta_{q}(0)=0, \ \forall {q}\in\\{1,\ldot
 
 
 **\eqref{eq:disp:ode} and \eqref{eq:velo:ode} are governed by ODEs from differentiating internal variables.**
+
+
+##Fully discrete formulation
+
+Let us discretise time space. Define $\Delta t=T/N$ for $N\in\mathbb{N}$ and $t_n=n\Delta t$ for $n=0,\ldots,N$. We approximate the solution by
+$$u(t_n,x)\approx Z_h^n(x)\in V^h,\qquad \dot u(t_n,x)\approx W_h^n(x)\in V^h$$based on Crank-Nicolson method with
+$$\frac{W_h^{n+1}(x)+W_h^n(x)}{2}=\frac{Z_h^{n+1}(x)-Z_h^n(x)}{\Delta t}.$$
