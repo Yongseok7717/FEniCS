@@ -31,27 +31,29 @@ Define a finite element space $V^h\subset V= \\{ H^1(\Omega)|v=0\  \text{for }x\
 \\begin{alignat}{2}
 ({\rho\ddot u(t)},{v})_ {L_2(\Omega)}+a(u(t),v)-\sum_{q=1}^{N_\varphi}a(\psi_{q}(t),v)
 &=F_d(t;v)\qquad
-&&\forall v\in V,
+&&\forall v\in V,\label{eq:disp}
 \\\\
 \tau_{q}a(\dot\psi_{q}(t),v)+a(\psi_{q}(t),v)
 &=\varphi_{q}a(u(t),v) \qquad
-&&\forall v\in V,\ q=1,\ldots,N_\varphi 
+&&\forall v\in V,\ q=1,\ldots,N_\varphi\label{eq:disp:ode} 
 \\end{alignat}where $
 a(w,v)=({D\nabla w}, {\nabla v})_ {L_2(\Omega)}$ and $F_d(t;v)=({f(t)},{v})_ {L_2(\Omega)}+(g_N(t),v)_ {L_2(\Gamma_N)}$
 with $u(0)=u_0,$ $\dot u(0)=w_0$ and $\psi_{q}(0)=0, \ \forall {q}\in\\{1,\ldots,N_\varphi\\}$.
 
 In a similar way, we can also obtain a weak formulation of velocity form.
-### Displacement form
+### Velocity form
 \\begin{alignat}{2}
 ({\rho\ddot u(t)},{v})_ {L_2(\Omega)}+\varphi_0a(u(t),v)+\sum_{q=1}^{N_\varphi}a(\zeta_{q}(t),v)
 =F_v(t;v)\qquad
-&&\forall v\in V,
+&&\forall v\in V,\label{eq:velo}
 \\\\
 \tau_{q}a(\dot\zeta_{q}(t),v)+a(\zeta_{q}(t),v)
 =\tau_q\varphi_{q}a(\dot u(t),v) \qquad
-&&\forall v\in V,\ q=1,\ldots,N_\varphi 
+&&\forall v\in V,\ q=1,\ldots,N_\varphi\label{eq:velo:ode} 
 \\end{alignat}where 
 $F_v(t;v)= F_d(t;v)
 -\sum_{{q}=1}^{N_\varphi}\varphi_qe^{-t/\tau_{q}}a(u_0,v)$
 with $u(0)=u_0,$ $\dot u(0)=w_0$ and $\zeta_{q}(0)=0, \ \forall {q}\in\\{1,\ldots,N_\varphi\\}$.
 
+
+**\eqref{eq:disp:ode} and \eqref{eq:velo:ode} are governed by ODEs from differentiating internal variables.**
