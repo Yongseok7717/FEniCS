@@ -6,4 +6,4 @@ $$ \rho\boldsymbol{u}-\nabla\cdot\boldsymbol{\sigma}=\boldsymbol{f} $$
 where $\rho$ is a density, $\boldsymbol{u}$ is a displacement vector, $\boldsymbol{\sigma}$ is a stress tensor and $\boldsymbol{f}$ is an external force. The stress tensor is defined by
 $$\boldsymbol{\sigma}=\boldsymbol{D}\boldsymbol{\varepsilon}$$
 where $\boldsymbol{D}$ is a symmetric positive definite fourth order tensor and $\boldsymbol{\varepsilon}$ is Cauchy infinitesimal strain tensor such that
-$$\varepsilon(\boldsymbol u)_{ij}=\frac{1}{2}(\frac{\partial u_i}{\partial x_j}+\frac{\partial u_j}{\partial x_i}) $$
+$$\varepsilon_{ij}(\boldsymbol u)=\frac{1}{2}(\frac{\partial u_i}{\partial x_j}+\frac{\partial u_j}{\partial x_i})\ \text{for }i,j=1,\ldots,d. $$
