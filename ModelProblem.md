@@ -90,4 +90,4 @@ each for all $v\in V^h$.
 
 ## Numerical Experiments
 
-Let $u=e^{-t}\sin(xy)$ on the unit square.
+Let $u=e^{-t}\sin(xy)$ be the exact solution on the unit square. While we set $\varphi_0=0.5,\ \varphi_1=0.1,\ \varphi_2=0.4,\    \tau_1=0.5,\ \tau_2=1.5,$ $\rho=1$ and $D=1$, we can obatain internal variables for $q=1,2$, the source term $f$ and the Neumann boundary condition $g_N$.
