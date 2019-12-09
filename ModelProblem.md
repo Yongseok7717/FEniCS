@@ -87,3 +87,7 @@ a(Z_h^0,{v})= a({u_0},{v}) ,\label{p2f3}\\\\
 \\end{gather}
 each for all $v\in V^h$.
 
+
+## Numerical Experiments
+
+Let $u=e^{-t}\sin(xy)$ on the unit square.
