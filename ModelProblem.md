@@ -1,7 +1,7 @@
 # Mathematical model of viscoelasticity
 
 
-Dynamic vicoelastic problem of generalised Maxwell solid is represented as a second kind of Volterra integral equation with expontially decaying kernel. Our aim is to solve the hyperbolic PDE with memory terms by spatially continuous Galerkin finite element method (CGFEM) and Crank-Nicolso finite difference scheme for time discretisation.
+Dynamic vicoelastic problem of generalised Maxwell solid is represented as a second kind of Volterra integral equation with expontially decaying kernel. Our aim is to solve the hyperbolic PDE with memory terms by spatially continuous Galerkin finite element method (CGFEM) and Crank-Nicolson finite difference scheme for time discretisation.
 
 
 **We breifly introduce the model problem and give a numerical scheme.**
@@ -67,12 +67,12 @@ $$\frac{W_h^{n+1}(x)+W_h^n(x)}{2}=\frac{Z_h^{n+1}(x)-Z_h^n(x)}{\Delta t}\text{ f
 
 
 In the end, we can formulate fully discrete schemes;
-\\newcommand{\Lnorm}[2]{\left(#1, #2\right)}
+
 ### Displacement form
 \\begin{gather}
-\Lnorm{\rho\frac{W^{n+1}_h-W^{n}_h}{\Delta t}}{v}+a\left(\frac{Z_h^{n+1}+Z_h^{n}}{2},v\right)-\sum\limits_{q=1}^{N_\varphi}a\left(\frac{{\Psi}_{hq}^{n+1}+{\Psi}_{hq}^{n}}{2},v\right)=\frac{F_d(t_{n+1};v)+F_d(t_{n};v)}{2},\label{p1f1} \\\tau_{q}a\left(\frac{{\Psi}_{hq}^{n+1}-{\Psi}_{hq}^{n}}{\Delta t},v\right)+a\left(\frac{{\Psi}_{hq}^{n+1}+{\Psi}_{hq}^{n}}{2},v\right)=\varphi_qa\left(\frac{Z_h^{n+1}+Z_h^{n}}{2},v\right) \textrm{ for each }{q},\label{p1f2}\\
+({\rho\frac{W^{n+1}_ h-W^{n}_ h}{\Delta t}},{v})_ {L_2(\Omega)}+a\left(\frac{Z_h^{n+1}+Z_h^{n}}{2},v\right)-\sum\limits_{q=1}^{N_\varphi}a\left(\frac{{\Psi}_ {hq}^{n+1}+{\Psi}_ {hq}^{n}}{2},v\right)=\frac{F_d(t_{n+1};v)+F_d(t_{n};v)}{2},\label{p1f1} \\\tau_{q}a\left(\frac{{\Psi}_ {hq}^{n+1}-{\Psi}_ {hq}^{n}}{\Delta t},v\right)+a\left(\frac{{\Psi}_ {hq}^{n+1}+{\Psi}_ {hq}^{n}}{2},v\right)=\varphi_qa\left(\frac{Z_h^{n+1}+Z_h^{n}}{2},v\right) \textrm{ for each }{q},\label{p1f2}\\
 a(Z_h^0,{v})= a({u_0},{v}) ,\label{p1f3}\\
-\Lnorm{W^0_h}{v}=\Lnorm{w_0}{v},\label{p1f4}\\
-{\Psi}_{hq}^0=0\qquad\textrm{for each } q,\label{p1f5}
+({W^0_h},{v})_ {L_2(\Omega)}=({w_0},{v})_ {L_2(\Omega)},\label{p1f4}\\
+{\Psi}_ {hq}^0=0\qquad\textrm{for each } q,\label{p1f5}
 \\end{gather}
 each for all $v\in V^h$.
