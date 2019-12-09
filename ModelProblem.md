@@ -82,7 +82,7 @@ each for all $v\in V^h$.
 \\begin{gather}
 \left({\rho\frac{W^{n+1}_ h-W^{n}_ h}{\Delta t}},{v}\right)_ {L_2(\Omega)}+\varphi_0a\left(\frac{Z_h^{n+1}+Z_h^{n}}{2},v\right)+\sum\limits_{q=1}^{N_\varphi}a\left(\frac{{\mathcal{S}}_ {hq}^{n+1}+{\mathcal S}_ {hq}^{n}}{2},v\right)=\frac{F_v(t_{n+1};v)+F_v(t_{n};v)}{2},\label{p2f1} \\\\\tau_{q}a\left(\frac{{\mathcal S}_ {hq}^{n+1}-{\mathcal S}_ {hq}^{n}}{\Delta t},v\right)+a\left(\frac{{\mathcal S}_ {hq}^{n+1}+{\mathcal S}_ {hq}^{n}}{2},v\right)=\tau_q\varphi_qa\left(\frac{W_h^{n+1}+W_h^{n}}{2},v\right) \textrm{ for each }{q},\label{p2f2}\\\\
 a(Z_h^0,{v})= a({u_0},{v}) ,\label{p2f3}\\\\
-({W^0_h},{v})_ {L_2(\Omega)}=({w_0},{v})_ {L_2(\Omega)},\label{p1f4}\\\\
+({W^0_h},{v})_ {L_2(\Omega)}=({w_0},{v})_ {L_2(\Omega)},\label{p2f4}\\\\
 {\mathcal S}_ {hq}^0=0\qquad\textrm{for each } q,\label{p2f5}
 \\end{gather}
 each for all $v\in V^h$.
