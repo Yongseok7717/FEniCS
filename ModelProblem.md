@@ -27,7 +27,7 @@ $\psi_{q}(t)=\varphi_{q} u(t)-\varphi_{q}e^{-t/\tau_{q}}u_0-\zeta_{q}(t)$ where
 $$ \zeta_{q}(t)=\int^t_0\varphi_{q}e^{-(t-s)/\tau_{q}} \dot u(s)\ ds.$$
 
 Define a finite element space $V^h\subset V= \\{ H^1(\Omega)|v=0\  \text{for }x\in\Gamma_D \\} $ of Lagrange finite element. Then we can derive variational problem with respect to internal variables.
-### Displacement form
+### Displacement form (P1)
 \\begin{alignat}{2}
 ({\rho\ddot u(t)},{v})_ {L_2(\Omega)}+a(u(t),v)-\sum_{q=1}^{N_\varphi}a(\psi_{q}(t),v)
 &=F_d(t;v)\qquad
@@ -41,7 +41,7 @@ a(w,v)=({D\nabla w}, {\nabla v})_ {L_2(\Omega)}$ and $F_d(t;v)=({f(t)},{v})_ {L_
 with $u(0)=u_0,$ $\dot u(0)=w_0$ and $\psi_{q}(0)=0, \ \forall {q}\in\\{1,\ldots,N_\varphi\\}$.
 
 In a similar way, we can also obtain a weak formulation of velocity form.
-### Velocity form
+### Velocity form (P2)
 \\begin{alignat}{2}
 ({\rho\ddot u(t)},{v})_ {L_2(\Omega)}+\varphi_0a(u(t),v)+\sum_{q=1}^{N_\varphi}a(\zeta_{q}(t),v)
 =F_v(t;v)\qquad
@@ -68,7 +68,7 @@ $$\frac{W_h^{n+1}(x)+W_h^n(x)}{2}=\frac{Z_h^{n+1}(x)-Z_h^n(x)}{\Delta t}\text{ f
 
 In the end, we can formulate fully discrete schemes;
 
-### Displacement form
+### Displacement form (P1)
 \\begin{gather}
 \left({\rho\frac{W^{n+1}_ h-W^{n}_ h}{\Delta t}},{v}\right)_ {L_2(\Omega)}+a\left(\frac{Z_h^{n+1}+Z_h^{n}}{2},v\right)-\sum\limits_{q=1}^{N_\varphi}a\left(\frac{{\Psi}_ {hq}^{n+1}+{\Psi}_ {hq}^{n}}{2},v\right)=\frac{F_d(t_{n+1};v)+F_d(t_{n};v)}{2},\label{p1f1} \\\\\tau_{q}a\left(\frac{{\Psi}_ {hq}^{n+1}-{\Psi}_ {hq}^{n}}{\Delta t},v\right)+a\left(\frac{{\Psi}_ {hq}^{n+1}+{\Psi}_ {hq}^{n}}{2},v\right)=\varphi_qa\left(\frac{Z_h^{n+1}+Z_h^{n}}{2},v\right) \textrm{ for each }{q},\label{p1f2}\\\\
 a(Z_h^0,{v})= a({u_0},{v}) ,\label{p1f3}\\\\
@@ -78,7 +78,7 @@ a(Z_h^0,{v})= a({u_0},{v}) ,\label{p1f3}\\\\
 each for all $v\in V^h$.
 
 
-### Velocity form
+### Velocity form (P2)
 \\begin{gather}
 \left({\rho\frac{W^{n+1}_ h-W^{n}_ h}{\Delta t}},{v}\right)_ {L_2(\Omega)}+\varphi_0a\left(\frac{Z_h^{n+1}+Z_h^{n}}{2},v\right)+\sum\limits_{q=1}^{N_\varphi}a\left(\frac{{\mathcal{S}}_ {hq}^{n+1}+{\mathcal S}_ {hq}^{n}}{2},v\right)=\frac{F_v(t_{n+1};v)+F_v(t_{n};v)}{2},\label{p2f1} \\\\\tau_{q}a\left(\frac{{\mathcal S}_ {hq}^{n+1}-{\mathcal S}_ {hq}^{n}}{\Delta t},v\right)+a\left(\frac{{\mathcal S}_ {hq}^{n+1}+{\mathcal S}_ {hq}^{n}}{2},v\right)=\tau_q\varphi_qa\left(\frac{W_h^{n+1}+W_h^{n}}{2},v\right) \textrm{ for each }{q},\label{p2f2}\\\\
 a(Z_h^0,{v})= a({u_0},{v}) ,\label{p2f3}\\\\
@@ -91,3 +91,10 @@ each for all $v\in V^h$.
 ## Numerical Experiments
 
 Let $u=e^{-t}\sin(xy)$ be the exact solution on the unit square. While we set $\varphi_0=0.5,\ \varphi_1=0.1,\ \varphi_2=0.4,\    \tau_1=0.5,\ \tau_2=1.5,$ $\rho=1$ and $D=1$, we can obatain internal variables for $q=1,2$, the source term $f$ and the Neumann boundary condition $g_N$.
+
+
+According to the fully discrete formulations of dispalcement form \eqref{p1f1}-\eqref{p1f5} and velocity form \eqref{p2f1}-\eqref{p2f5}, code implemetation has been carried out in **CG_P1.py** (displacement form) and **CG_P2.py** (velocity form). Here we can observe and compare numerical errors and convergent rates with respect to a degree of polynomial and the form of internal variables.
+
+
+- Run **main_Figure1.sh** to illustrate graphs of error convergence rates for linear and quadratic polynomial bases when $h\approx\Delta t$.
+- Run **main_Table.sh** to describe tables of numerical error for fixed either $h$ or $\Delta t$ where a degree of polynomial is 2.
