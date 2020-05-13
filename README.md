@@ -4,6 +4,8 @@ My works forcused on numerical solutions to **dynamic viscoelastic problems**.
 Code implementations deal with simple wave equations, elastic problems, vicoelastic problems modelled by *generalised Maxwell solid* or *fractional order model*.  
 Numerical schemes are based on *spatial finite element methods*(CG/DG) and *Crank-Nicolson method* for time discretisation.
 
+For more details, please see **ModelProblem.pdf**.
+
 
 All codes are constructed in Python 2.7.12 and FEniCS(dolfin) 2016.2.0.
 
